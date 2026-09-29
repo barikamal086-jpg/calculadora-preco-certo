@@ -1,0 +1,49 @@
+CALCULADORA DE PREÇOS PARA DELIVERY (app instalável)
+=====================================================
+
+O QUE TEM NESTA PASTA
+- index.html .............. o app
+- manifest.webmanifest .... nome, cores e ícones do app instalado
+- sw.js ................... faz o app funcionar sem internet
+- icon-*.png / apple-touch-icon.png ... ícones
+- vercel.json ............. ajustes para hospedar na Vercel
+
+IMPORTANTE: suba TODOS os arquivos juntos, na mesma pasta.
+O app só pode ser instalado quando estiver num endereço https
+(Vercel e Netlify já fazem isso automaticamente).
+
+
+OPÇÃO 1: GITHUB + VERCEL (a mesma forma do app de registro de vendas)
+1. No GitHub, crie um repositório novo (ex.: calculadora-preco-certo).
+2. Envie todos os arquivos desta pasta para o repositório (Add file > Upload files).
+3. Na Vercel, crie um projeto novo importando esse repositório.
+   Framework: "Other". Não precisa de comando de build.
+4. Clique em Deploy. O app fica em algo como:
+   https://calculadora-preco-certo.vercel.app
+
+OPÇÃO 2: NETLIFY DROP (sem GitHub, a mais rápida)
+1. Acesse app.netlify.com/drop
+2. Arraste a pasta inteira para a página.
+3. Pronto: o site recebe um endereço https. Crie uma conta para ele não expirar
+   e para poder trocar o nome do endereço.
+
+
+DEPOIS DE PUBLICAR
+- Abra o link no celular para testar:
+  Android (Chrome): aparece o aviso "Instale no seu celular" com botão Instalar.
+  iPhone (Safari): Compartilhar > Adicionar à Tela de Início.
+- Coloque o link no Bônus 4 do e-book.
+
+
+PARA ATUALIZAR O APP NO FUTURO
+1. Substitua o index.html pelo novo.
+2. Abra o sw.js e troque 'preco-certo-v1' por 'preco-certo-v2' (v3, v4...).
+   Isso faz os celulares que já instalaram baixarem a versão nova.
+3. Envie de novo (GitHub/Vercel atualiza sozinho; no Netlify, arraste de novo).
+
+
+SOBRE OS DADOS DOS USUÁRIOS
+Cada pessoa guarda os próprios dados no próprio celular. Nada vai para servidor,
+não precisa de login e você não tem acesso aos dados de ninguém.
+Se a pessoa trocar de celular ou limpar o navegador, perde os dados, por isso
+existe o botão "Baixar backup" / "Restaurar backup" em "Meu negócio".
